@@ -5,7 +5,9 @@
         "build": "vite build",
         "dev": "vite",
         "prepare": "husky install",
-        "test": "./vendor/bin/pest tests"
+        "test": "./vendor/bin/pest tests",
+        "lint": "./vendor/bin/duster lint --using=pint",
+        "fix": "./vendor/bin/duster fix --using=pint"
         
     },
     "devDependencies": {
