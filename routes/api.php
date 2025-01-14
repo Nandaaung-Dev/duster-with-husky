@@ -29,5 +29,5 @@ Route::post('/login', function (Request $request) {
 
 // Get 5 random users (protected route)
 Route::get('/user', function (Request $request) {
-    return User::inRandomOrder()->take(5)->get();
+    return User::inRandomOrder()->select('id', 'name')->take(5)->get();
 })->middleware('auth:sanctum');
